@@ -42,4 +42,22 @@ public class BookedRoom {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_id")
     private Room room;
+
+    public void calculateTotalNumberOfGuest(){
+        this.totalNumOfGuest = this.NumOfAdults + NumOfChildren;
+    }
+
+    public void setNumOfAdults(int numOfAdults) {
+        NumOfAdults = numOfAdults;
+        calculateTotalNumberOfGuest();
+    }
+
+    public void setNumOfChildren(int numOfChildren) {
+        NumOfChildren = numOfChildren;
+        calculateTotalNumberOfGuest();
+    }
+
+    public void setBookingConfirmationCode(String bookingConfirmationCode) {
+        this.bookingConfirmationCode = bookingConfirmationCode;
+    }
 }
