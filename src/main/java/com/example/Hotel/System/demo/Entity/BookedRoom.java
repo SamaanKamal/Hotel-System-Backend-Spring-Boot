@@ -13,6 +13,9 @@ import java.time.LocalDate;
 @Builder
 @Table(name = "booked_room")
 public class BookedRoom {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "booking_Id")
     private Integer bookingId;
 
     @Column(name = "check_in")
