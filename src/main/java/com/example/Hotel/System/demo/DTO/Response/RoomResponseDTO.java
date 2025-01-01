@@ -22,7 +22,7 @@ public class RoomResponseDTO {
 
     private String photo;
 
-    private List<BooingResponseDTO> bookings;
+    private List<BookingResponseDTO> bookings;
 
     public RoomResponseDTO(Integer id, String roomType, BigDecimal roomPrice) {
         this.id = id;
@@ -30,7 +30,7 @@ public class RoomResponseDTO {
         this.roomPrice = roomPrice;
     }
 
-    public RoomResponseDTO(Integer id, String roomType, BigDecimal roomPrice, Boolean isBooked, byte[] photoByte, List<BooingResponseDTO> bookings) {
+    public RoomResponseDTO(Integer id, String roomType, BigDecimal roomPrice, Boolean isBooked, byte[] photoByte, List<BookingResponseDTO> bookings) {
         this.id = id;
         this.roomType = roomType;
         this.roomPrice = roomPrice;
